@@ -67,7 +67,58 @@
               </button>
             </div>
             <div class="modal-body">
-              ...
+              <form>
+                <div class="form-group row">
+                  <label for="firstName" class="col-4">First name</label>
+                  <div class="col-8">
+                    <input type="text" class="form-control" id="firstName" type="text">
+                  </div>
+                </div>
+                <div class="form-group row">
+                  <label for="lastName" class="col-4">Last name</label>
+                  <div class="col-8">
+                    <input type="text" class="form-control" id="lastName" type="text">
+                  </div>
+                </div>
+                <div class="form-group row">
+                  <label for="roleType" class="col-4">Role</label>
+                  <div class="col-8">
+                    <select class="form-control" id="roleType">
+                      <option>Select role</option>
+                      <option>Administrator</option>
+                      <option>Manager</option>
+                      <option>Agent</option>
+                      <option>Viewer</option>
+                    </select>
+                  </div>
+                </div>
+                <div class="form-group row">
+                  <label for="primaryEmail" class="col-4">Primary email</label>
+                  <div class="col-8">
+                    <input type="text" class="form-control" id="primaryEmail" type="email">
+                  </div>
+                </div>
+                <div class="form-group row">
+                  <label for="secondEmail" class="col-4">Secondary email</label>
+                  <div class="col-8">
+                    <input type="text" class="form-control" id="secondEmail" type="email">
+                    <small id="secondEmailHelpBlock" class="form-text text-muted">(optional)</small>
+                  </div>
+                </div>
+                <div class="form-group row">
+                  <label for="primaryPhone" class="col-4">Primary phone</label>
+                  <div class="col-8">
+                    <input type="text" class="form-control" id="primaryPhone" type="tel">
+                  </div>
+                </div>
+                <div class="form-group row">
+                  <label for="secondPhone" class="col-4">Secondary phone</label>
+                  <div class="col-8">
+                    <input type="text" class="form-control" id="secondPhone" type="tel">
+                    <small id="secondPhoneHelpBlock" class="form-text text-muted">(optional)</small>
+                  </div>
+                </div>
+              </form>
             </div>
             <div class="modal-footer">
               <button type="button" class="btn btn-secondary" data-dismiss="modal">Close</button>
@@ -88,7 +139,58 @@
               </button>
             </div>
             <div class="modal-body">
-              ...
+              <form>
+                <div class="form-group row">
+                  <label for="firstName" class="col-4">First name</label>
+                  <div class="col-8">
+                    <input type="text" class="form-control" id="firstName" type="text" value="Anna">
+                  </div>
+                </div>
+                <div class="form-group row">
+                  <label for="lastName" class="col-4">Last name</label>
+                  <div class="col-8">
+                    <input type="text" class="form-control" id="lastName" type="text" value="Bingham">
+                  </div>
+                </div>
+                <div class="form-group row">
+                  <label for="roleType" class="col-4">Role</label>
+                  <div class="col-8">
+                    <select class="form-control" id="roleType">
+                      <option>Select role</option>
+                      <option selected="selected">Administrator</option>
+                      <option>Manager</option>
+                      <option>Agent</option>
+                      <option>Viewer</option>
+                    </select>
+                  </div>
+                </div>
+                <div class="form-group row">
+                  <label for="primaryEmail" class="col-4">Primary email</label>
+                  <div class="col-8">
+                    <input type="text" class="form-control" id="primaryEmail" type="email" value="anna.bingham@companyone.com">
+                  </div>
+                </div>
+                <div class="form-group row">
+                  <label for="secondEmail" class="col-4">Secondary email</label>
+                  <div class="col-8">
+                    <input type="text" class="form-control" id="secondEmail" type="email">
+                    <small id="secondEmailHelpBlock" class="form-text text-muted">(optional)</small>
+                  </div>
+                </div>
+                <div class="form-group row">
+                  <label for="primaryPhone" class="col-4">Primary phone</label>
+                  <div class="col-8">
+                    <input type="text" class="form-control" id="primaryPhone" type="tel" value="00 44 123456789">
+                  </div>
+                </div>
+                <div class="form-group row">
+                  <label for="secondPhone" class="col-4">Secondary phone</label>
+                  <div class="col-8">
+                    <input type="text" class="form-control" id="secondPhone" type="tel">
+                    <small id="secondPhoneHelpBlock" class="form-text text-muted">(optional)</small>
+                  </div>
+                </div>
+              </form>
             </div>
             <div class="modal-footer">
               <button type="button" class="btn btn-secondary" data-dismiss="modal">Close</button>
@@ -104,19 +206,19 @@
 				</thead>
 				<tbody>
 					<tr>
-						<td><input id="uid1" value="1" checked="checked" disabled="disabled" type="checkbox"></td>
+						<td><input id="uid1" value="1" checked="checked" type="checkbox"></td>
 						<td>Anna Bingham</td><td>Administrator</td><td>anna.bingham@companyone.com</td><td>01/01/18 00:00</td>
 						<td><a href="" class="btn btn-secondary" title="Edit this person"  data-toggle="modal" data-target="#editPeople">Edit</a></td></tr>
 					<tr>
-						<td><input id="uid2" value="1" disabled="disabled" type="checkbox"></td>
+						<td><input id="uid2" value="1" type="checkbox"></td>
             <td>Carlos Duarte</td><td>Manager</td><td>carlos.duarte@companytwo.com</td><td>01/01/18 00:00</td>
             <td><a href="" class="btn btn-secondary" title="Edit this person"  data-toggle="modal" data-target="#editPeople">Edit</a></td></tr>
 					<tr>
-						<td><input id="uid1" value="1" checked="checked" disabled="disabled" type="checkbox"></td>
+						<td><input id="uid1" value="1" checked="checked" type="checkbox"></td>
             <td>Evan Francis</td><td>Agent</td><td>evan.francis@companythree.com</td><td>01/01/18 00:00</td>
             <td><a href="" class="btn btn-secondary" title="Edit this person"  data-toggle="modal" data-target="#editPeople">Edit</a></td></tr>
 					<tr>
-						<td><input id="uid1" value="1" checked="checked" disabled="disabled" type="checkbox"></td>
+						<td><input id="uid1" value="1" checked="checked" type="checkbox"></td>
             <td>Giacomo Hiscoti</td><td>Viewer</td><td>giacomo.hiscoti@companyfour.com</td><td>01/01/18 00:00</td>
             <td><a href="" class="btn btn-secondary" title="Edit this person"  data-toggle="modal" data-target="#editPeople">Edit</a></td></tr>
 				</tbody>

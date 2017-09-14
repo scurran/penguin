@@ -50,7 +50,7 @@
     <div class="container-fluid">
       <div class="row mb-4">
         <div class="col">
-          <h2>Products</h2>
+          <h2>Permissions</h2>
         </div>
         <div class="col col-md-auto">
           <button class="btn btn-primary" data-toggle="modal" data-target="#addPermission">Add permission</button>
@@ -67,7 +67,44 @@
               </button>
             </div>
             <div class="modal-body">
-              ...
+              <form>
+                <div class="form-group row">
+                  <label for="productType" class="col-4">Product</label>
+                  <div class="col-8">
+                    <select class="form-control" id="productType">
+                      <option>Select product</option>
+                      <option>Current Account EUR UK</option>
+                      <option>Current Account EUR ES</option>
+                      <option>Current Account GBP UK</option>
+                      <option>Current Account EUR IT</option>
+                    </select>
+                  </div>
+                </div>
+                <div class="form-group row">
+                  <label for="roleType" class="col-4">Role</label>
+                  <div class="col-8">
+                    <select class="form-control" id="roleType">
+                      <option>Select role</option>
+                      <option>Administrator</option>
+                      <option>Manager</option>
+                      <option>Agent</option>
+                      <option>Viewer</option>
+                    </select>
+                  </div>
+                </div>
+                <div class="form-group row">
+                  <label for="roleType" class="col-4">Person</label>
+                  <div class="col-8">
+                    <select class="form-control" id="roleType">
+                      <option>Select person</option>
+                      <option>Anna Bingham</option>
+                      <option>Carlos Duarte</option>
+                      <option>Evan Francis</option>
+                      <option>Giacomo Hiscoti</option>
+                    </select>
+                  </div>
+                </div>
+              </form>
             </div>
             <div class="modal-footer">
               <button type="button" class="btn btn-secondary" data-dismiss="modal">Close</button>
@@ -88,7 +125,44 @@
               </button>
             </div>
             <div class="modal-body">
-              ...
+              <form>
+                <div class="form-group row">
+                  <label for="productType" class="col-4">Product</label>
+                  <div class="col-8">
+                    <select class="form-control" id="productType">
+                      <option>Select product</option>
+                      <option selected="selected">Current Account EUR UK</option>
+                      <option>Current Account EUR ES</option>
+                      <option>Current Account GBP UK</option>
+                      <option>Current Account EUR IT</option>
+                    </select>
+                  </div>
+                </div>
+                <div class="form-group row">
+                  <label for="roleType" class="col-4">Role</label>
+                  <div class="col-8">
+                    <select class="form-control" id="roleType">
+                      <option>Select role</option>
+                      <option selected="selected">Administrator</option>
+                      <option>Manager</option>
+                      <option>Agent</option>
+                      <option>Viewer</option>
+                    </select>
+                  </div>
+                </div>
+                <div class="form-group row">
+                  <label for="roleType" class="col-4">Person</label>
+                  <div class="col-8">
+                    <select class="form-control" id="roleType">
+                      <option>Select person</option>
+                      <option selected="selected">Anna Bingham</option>
+                      <option>Carlos Duarte</option>
+                      <option>Evan Francis</option>
+                      <option>Giacomo Hiscoti</option>
+                    </select>
+                  </div>
+                </div>
+              </form>
             </div>
             <div class="modal-footer">
               <button type="button" class="btn btn-secondary" data-dismiss="modal">Close</button>
@@ -104,20 +178,20 @@
         </thead>
         <tbody>
           <tr>
-            <td><input id="uid1" value="1" checked="checked" disabled="disabled" type="checkbox"></td>
-            <td>Product A</td><td>Administrator</td><td>Anna Bingham</td><td>01/01/20 00:00</td>
+            <td><input id="uid1" value="1" checked="checked" type="checkbox"></td>
+            <td>Current Account EUR UK</td><td>Administrator</td><td>Anna Bingham</td><td>01/01/20 00:00</td>
             <td><a href="" class="btn btn-secondary" title="Edit this product" data-toggle="modal" data-target="#editPermission">Edit</a></td></tr>
           <tr>
-            <td><input id="uid2" value="1" disabled="disabled" type="checkbox"></td>
-            <td>Product B</td><td>Manager</td><td>Carlos Duarte</td><td>01/01/20 00:00</td>
+            <td><input id="uid2" value="1" type="checkbox"></td>
+            <td>Current Account EUR ES</td><td>Manager</td><td>Carlos Duarte</td><td>01/01/20 00:00</td>
             <td><a href="" class="btn btn-secondary" title="Edit this product" data-toggle="modal" data-target="#editPermission">Edit</a></td></tr>
           <tr>
-            <td><input id="uid1" value="1" checked="checked" disabled="disabled" type="checkbox"></td>
-            <td>Product C</td><td>Agent</td><td>Evan Francis</td><td>01/01/20 00:00</td>
+            <td><input id="uid1" value="1" checked="checked" type="checkbox"></td>
+            <td>Current Account GBP UK</td><td>Agent</td><td>Evan Francis</td><td>01/01/20 00:00</td>
             <td><a href="" class="btn btn-secondary" title="Edit this product" data-toggle="modal" data-target="#editPermission">Edit</a></td></tr>
           <tr>
-            <td><input id="uid1" value="1" checked="checked" disabled="disabled" type="checkbox"></td>
-            <td>Product D</td><td>Viewer</td><td>Giacomo Hiscoti</td><td>01/01/20 00:00</td>
+            <td><input id="uid1" value="1" checked="checked" type="checkbox"></td>
+            <td>Current Account EUR IT</td><td>Viewer</td><td>Giacomo Hiscoti</td><td>01/01/20 00:00</td>
             <td><a href="" class="btn btn-secondary" title="Edit this product" data-toggle="modal" data-target="#editPermission">Edit</a></td></tr>
         </tbody>
       </table>
