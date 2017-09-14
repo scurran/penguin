@@ -48,6 +48,56 @@
     </nav>
 
     <div class="container-fluid">
+      <div class="row mb-4">
+        <div class="col">
+          <h2>Products</h2>
+        </div>
+        <div class="col col-md-auto">
+          <button class="btn btn-primary" data-toggle="modal" data-target="#addRole">Add role</button>
+        </div>
+      </div>
+      <!-- Modal (add) -->
+      <div class="modal fade" id="addRole" tabindex="-1" role="dialog" aria-labelledby="addRoleLabel" aria-hidden="true">
+        <div class="modal-dialog" role="document">
+          <div class="modal-content">
+            <div class="modal-header">
+              <h5 class="modal-title" id="addRoleLabel">Add role</h5>
+              <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                <span aria-hidden="true">&times;</span>
+              </button>
+            </div>
+            <div class="modal-body">
+              ...
+            </div>
+            <div class="modal-footer">
+              <button type="button" class="btn btn-secondary" data-dismiss="modal">Close</button>
+              <button type="button" class="btn btn-primary">Save changes</button>
+            </div>
+          </div>
+        </div>
+      </div>
+      <!-- end modal -->
+      <!-- Modal (edit) -->
+      <div class="modal fade" id="editRole" tabindex="-1" role="dialog" aria-labelledby="editRoleLabel" aria-hidden="true">
+        <div class="modal-dialog" role="document">
+          <div class="modal-content">
+            <div class="modal-header">
+              <h5 class="modal-title" id="editRoleLabel">Edit role</h5>
+              <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                <span aria-hidden="true">&times;</span>
+              </button>
+            </div>
+            <div class="modal-body">
+              ...
+            </div>
+            <div class="modal-footer">
+              <button type="button" class="btn btn-secondary" data-dismiss="modal">Close</button>
+              <button type="button" class="btn btn-primary">Save changes</button>
+            </div>
+          </div>
+        </div>
+      </div>
+      <!-- end modal -->
       <table class="table table-hover">
       				<thead class="bg-primary text-white">
       				<tr><th>Role name</th><th>Manage Roles</th><th>Manage Users</th><th>Search Records</th><th>View Records</th><th>Edit Records</th><th>Create Records</th><th>Edit Role</th></tr>
@@ -59,7 +109,7 @@
       					<td><input id="1-3" value="1" checked="checked" disabled="disabled" type="checkbox"></td>
       					<td><input id="1-4" value="1" checked="checked" disabled="disabled" type="checkbox"></td>
       					<td><input id="1-5" value="1" checked="checked" disabled="disabled" type="checkbox"></td>
-      					<td><a href="" class="btn btn-secondary">Edit</a></td>
+      					<td><a href="" title="Edit this role" class="btn btn-secondary" data-toggle="modal" data-target="#editRole">Edit</a></td>
       				</tr>
       				<tr><td>Manager</td><td><input id="1-1" value="1" checked="checked" disabled="disabled" type="checkbox"></td>
       					<td><input id="2-1" value="1" disabled="disabled" type="checkbox"></td>
@@ -67,7 +117,7 @@
       					<td><input id="2-3" value="1" checked="checked" disabled="disabled" type="checkbox"></td>
       					<td><input id="2-4" value="1" checked="checked" disabled="disabled" type="checkbox"></td>
       					<td><input id="2-5" value="1" checked="checked" disabled="disabled" type="checkbox"></td>
-                <td><a href="" class="btn btn-secondary">Edit</a></td>
+                <td><a href="" title="Edit this role" class="btn btn-secondary" data-toggle="modal" data-target="#editRole" class="btn btn-secondary">Edit</a></td>
       				</tr>
       				<tr><td>Agent</td><td><input id="1-1" value="1" checked="checked" disabled="disabled" type="checkbox"></td>
       					<td><input id="3-1" value="1" disabled="disabled" type="checkbox"></td>
@@ -75,7 +125,7 @@
       					<td><input id="3-3" value="1" checked="checked" disabled="disabled" type="checkbox"></td>
       					<td><input id="3-4" value="1" checked="checked" disabled="disabled" type="checkbox"></td>
       					<td><input id="3-5" value="1" checked="checked" disabled="disabled" type="checkbox"></td>
-                <td><a href="" class="btn btn-secondary">Edit</a></td>
+                <td><a href="" title="Edit this role" class="btn btn-secondary" data-toggle="modal" data-target="#editRole" class="btn btn-secondary">Edit</a></td>
       				</tr>
       				<tr><td>Viewer</td><td><input id="1-1" value="1" checked="checked" disabled="disabled" type="checkbox"></td>
       					<td><input id="4-1" value="1" disabled="disabled" type="checkbox"></td>
@@ -83,20 +133,9 @@
       					<td><input id="4-3" value="1" checked="checked" disabled="disabled" type="checkbox"></td>
       					<td><input id="4-4" value="1" checked="checked" disabled="disabled" type="checkbox"></td>
       					<td><input id="4-5" value="1" disabled="disabled" type="checkbox"></td>
-                <td><a href="" class="btn btn-secondary">Edit</a></td>
+                <td><a href="" title="Edit this role" class="btn btn-secondary" data-toggle="modal" data-target="#editRole" class="btn btn-secondary">Edit</a></td>
       				</tr>
       				</tbody>
-      				<tfoot class="bg-faded">
-      				<tr><td><input class="form-control" id="newrole" placeholder="New Role Description" type="text"></td>
-      					<td><input id="0-1" value="1" type="checkbox"></td>
-      					<td><input id="0-1" value="1" type="checkbox"></td>
-      					<td><input id="0-2" value="1" type="checkbox"></td>
-      					<td><input id="0-3" value="1" type="checkbox"></td>
-      					<td><input id="0-4" value="1" type="checkbox"></td>
-      					<td><input id="0-5" value="1" type="checkbox"></td>
-      					<td colspan="2"><a href="" class="btn btn-primary">
-      						Add</a></td></tr>
-      				</tfoot>
       			</table>
     </div><!-- /.container -->
 

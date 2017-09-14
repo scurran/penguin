@@ -48,6 +48,56 @@
     </nav>
 
     <div class="container-fluid">
+      <div class="row mb-4">
+        <div class="col">
+          <h2>People</h2>
+        </div>
+        <div class="col col-md-auto">
+          <button class="btn btn-primary" data-toggle="modal" data-target="#addPeople">Add people</button>
+        </div>
+      </div>
+      <!-- Modal (add) -->
+      <div class="modal fade" id="addPeople" tabindex="-1" role="dialog" aria-labelledby="addPeopleLabel" aria-hidden="true">
+        <div class="modal-dialog" role="document">
+          <div class="modal-content">
+            <div class="modal-header">
+              <h5 class="modal-title" id="addPeopleLabel">Add people</h5>
+              <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                <span aria-hidden="true">&times;</span>
+              </button>
+            </div>
+            <div class="modal-body">
+              ...
+            </div>
+            <div class="modal-footer">
+              <button type="button" class="btn btn-secondary" data-dismiss="modal">Close</button>
+              <button type="button" class="btn btn-primary">Save changes</button>
+            </div>
+          </div>
+        </div>
+      </div>
+      <!-- end modal -->
+      <!-- Modal (edit) -->
+      <div class="modal fade" id="editPeople" tabindex="-1" role="dialog" aria-labelledby="editPeopleLabel" aria-hidden="true">
+        <div class="modal-dialog" role="document">
+          <div class="modal-content">
+            <div class="modal-header">
+              <h5 class="modal-title" id="editPeopleLabel">Edit people</h5>
+              <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                <span aria-hidden="true">&times;</span>
+              </button>
+            </div>
+            <div class="modal-body">
+              ...
+            </div>
+            <div class="modal-footer">
+              <button type="button" class="btn btn-secondary" data-dismiss="modal">Close</button>
+              <button type="button" class="btn btn-primary">Save changes</button>
+            </div>
+          </div>
+        </div>
+      </div>
+      <!-- end modal -->
       <table class="table">
 				<thead class="bg-primary text-white">
 					<tr><th>Active</th><th>User</th><th>Role</th><th>Email address</th><th>Last Login</th><th>Edit</th></tr>
@@ -56,38 +106,21 @@
 					<tr>
 						<td><input id="uid1" value="1" checked="checked" disabled="disabled" type="checkbox"></td>
 						<td>Anna Bingham</td><td>Administrator</td><td>anna.bingham@companyone.com</td><td>01/01/18 00:00</td>
-						<td><a href="" class="btn btn-secondary" title="Edit this user">Edit</a></td></tr>
+						<td><a href="" class="btn btn-secondary" title="Edit this person"  data-toggle="modal" data-target="#editPeople">Edit</a></td></tr>
 					<tr>
 						<td><input id="uid2" value="1" disabled="disabled" type="checkbox"></td>
             <td>Carlos Duarte</td><td>Manager</td><td>carlos.duarte@companytwo.com</td><td>01/01/18 00:00</td>
-            <td><a href="" class="btn btn-secondary" title="Edit this user">Edit</a></td></tr>
+            <td><a href="" class="btn btn-secondary" title="Edit this person"  data-toggle="modal" data-target="#editPeople">Edit</a></td></tr>
 					<tr>
 						<td><input id="uid1" value="1" checked="checked" disabled="disabled" type="checkbox"></td>
             <td>Evan Francis</td><td>Agent</td><td>evan.francis@companythree.com</td><td>01/01/18 00:00</td>
-            <td><a href="" class="btn btn-secondary" title="Edit this user">Edit</a></td></tr>
+            <td><a href="" class="btn btn-secondary" title="Edit this person"  data-toggle="modal" data-target="#editPeople">Edit</a></td></tr>
 					<tr>
 						<td><input id="uid1" value="1" checked="checked" disabled="disabled" type="checkbox"></td>
             <td>Giacomo Hiscoti</td><td>Viewer</td><td>giacomo.hiscoti@companyfour.com</td><td>01/01/18 00:00</td>
-            <td><a href="" class="btn btn-secondary" title="Edit this user">Edit</a></td></tr>
+            <td><a href="" class="btn btn-secondary" title="Edit this person"  data-toggle="modal" data-target="#editPeople">Edit</a></td></tr>
 				</tbody>
-				<tfoot class="bg-faded">
-					<tr>
-						<td><input id="uid1" value="1" checked="checked" type="checkbox"></td>
-						<td><input class="form-control" id="newusername" placeholder="Firstname Surname" type="text"></td>
-						<td><select class="form-control" type="list" id="newuserrole">
-              <option value="" selected="selected">Select role</option>
-							<option value="">Administrator</option>
-							<option value="">Manager</option>
-							<option value="">Agent</option>
-							<option value="">Viewer</option>
-						</select></td>
-						<td><input class="form-control" id="newuserlogin" placeholder="Email address" type="text"></td>
-						<td></td>
-						<td><a href="" class="btn btn-primary">
-							Add</a></td></tr>
-				</tfoot>
 			</table>
-
     </div><!-- /.container -->
 
 

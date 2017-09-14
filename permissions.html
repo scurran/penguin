@@ -48,6 +48,56 @@
     </nav>
 
     <div class="container-fluid">
+      <div class="row mb-4">
+        <div class="col">
+          <h2>Products</h2>
+        </div>
+        <div class="col col-md-auto">
+          <button class="btn btn-primary" data-toggle="modal" data-target="#addPermission">Add permission</button>
+        </div>
+      </div>
+      <!-- Modal (add) -->
+      <div class="modal fade" id="addPermission" tabindex="-1" role="dialog" aria-labelledby="addPermissionLabel" aria-hidden="true">
+        <div class="modal-dialog" role="document">
+          <div class="modal-content">
+            <div class="modal-header">
+              <h5 class="modal-title" id="addPermissionLabel">Add permission</h5>
+              <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                <span aria-hidden="true">&times;</span>
+              </button>
+            </div>
+            <div class="modal-body">
+              ...
+            </div>
+            <div class="modal-footer">
+              <button type="button" class="btn btn-secondary" data-dismiss="modal">Close</button>
+              <button type="button" class="btn btn-primary">Save changes</button>
+            </div>
+          </div>
+        </div>
+      </div>
+      <!-- end modal -->
+      <!-- Modal (edit) -->
+      <div class="modal fade" id="editPermission" tabindex="-1" role="dialog" aria-labelledby="addProductLabel" aria-hidden="true">
+        <div class="modal-dialog" role="document">
+          <div class="modal-content">
+            <div class="modal-header">
+              <h5 class="modal-title" id="editPermissionLabel">Edit permission</h5>
+              <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                <span aria-hidden="true">&times;</span>
+              </button>
+            </div>
+            <div class="modal-body">
+              ...
+            </div>
+            <div class="modal-footer">
+              <button type="button" class="btn btn-secondary" data-dismiss="modal">Close</button>
+              <button type="button" class="btn btn-primary">Save changes</button>
+            </div>
+          </div>
+        </div>
+      </div>
+      <!-- end modal -->
       <table class="table">
         <thead class="bg-primary text-white">
           <tr><th>Active</th><th>Product</th><th>Role</th><th>Person</th><th>Expiry date</th><th>Edit</th></tr>
@@ -56,38 +106,20 @@
           <tr>
             <td><input id="uid1" value="1" checked="checked" disabled="disabled" type="checkbox"></td>
             <td>Product A</td><td>Administrator</td><td>Anna Bingham</td><td>01/01/20 00:00</td>
-            <td><a href="" class="btn btn-secondary" title="Edit this user">Edit</a></td></tr>
+            <td><a href="" class="btn btn-secondary" title="Edit this product" data-toggle="modal" data-target="#editPermission">Edit</a></td></tr>
           <tr>
             <td><input id="uid2" value="1" disabled="disabled" type="checkbox"></td>
             <td>Product B</td><td>Manager</td><td>Carlos Duarte</td><td>01/01/20 00:00</td>
-            <td><a href="" class="btn btn-secondary" title="Edit this user">Edit</a></td></tr>
+            <td><a href="" class="btn btn-secondary" title="Edit this product" data-toggle="modal" data-target="#editPermission">Edit</a></td></tr>
           <tr>
             <td><input id="uid1" value="1" checked="checked" disabled="disabled" type="checkbox"></td>
             <td>Product C</td><td>Agent</td><td>Evan Francis</td><td>01/01/20 00:00</td>
-            <td><a href="" class="btn btn-secondary" title="Edit this user">Edit</a></td></tr>
+            <td><a href="" class="btn btn-secondary" title="Edit this product" data-toggle="modal" data-target="#editPermission">Edit</a></td></tr>
           <tr>
             <td><input id="uid1" value="1" checked="checked" disabled="disabled" type="checkbox"></td>
             <td>Product D</td><td>Viewer</td><td>Giacomo Hiscoti</td><td>01/01/20 00:00</td>
-            <td><a href="" class="btn btn-secondary" title="Edit this user">Edit</a></td></tr>
+            <td><a href="" class="btn btn-secondary" title="Edit this product" data-toggle="modal" data-target="#editPermission">Edit</a></td></tr>
         </tbody>
-        <tfoot class="bg-faded">
-          <tr>
-            <td><input id="uid1" value="1" checked="checked" type="checkbox"></td>
-            <td>
-              <select class="form-control" type="list" id="newuserrole">
-                <option value="" selected="selected">Select product</option>
-              </select>
-            </td>
-            <td></td>
-            <td>
-              <select class="form-control" type="list" id="newuserrole">
-                <option value="" selected="selected">Subscription type</option>
-              </select>
-            </td>
-            <td></td>
-            <td><a href="" class="btn btn-primary">
-              Add</a></td></tr>
-        </tfoot>
       </table>
 
     </div><!-- /.container -->
