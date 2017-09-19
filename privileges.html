@@ -20,23 +20,26 @@
       <button class="navbar-toggler navbar-toggler-right" type="button" data-toggle="collapse" data-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
         <span class="navbar-toggler-icon"></span>
       </button>
-      <a class="navbar-brand" href="#">Contract Administration</a>
+      <a class="navbar-brand" href="#">Acme Bank - Contract Administration</a>
       <div class="collapse navbar-collapse" id="navbarNav">
         <ul class="navbar-nav mr-auto">
           <li class="nav-item">
             <a class="nav-link" href="products.html">Products</a>
           </li>
           <li class="nav-item">
-            <a class="nav-link" href="people.html">People</a>
+            <a class="nav-link" href="users.html">Users</a>
           </li>
           <li class="nav-item">
             <a class="nav-link" href="roles.html">Roles</a>
           </li>
           <li class="nav-item active">
-            <a class="nav-link" href="permissions.html">Permissions</a>
+            <a class="nav-link" href="privileges.html">Privileges</a>
           </li>
         </ul>
         <ul class="navbar-nav">
+          <li class="nav-item">
+            <a class="nav-link" href="account.html">Account</a>
+          </li>
           <li class="nav-item">
             <a class="nav-link" href="profile.html">Profile</a>
           </li>
@@ -50,10 +53,10 @@
     <div class="container-fluid">
       <div class="row mb-4">
         <div class="col">
-          <h2>Permissions</h2>
+          <h2>Privileges</h2>
         </div>
         <div class="col col-md-auto">
-          <button class="btn btn-primary" data-toggle="modal" data-target="#addPermission">Add permission</button>
+          <button class="btn btn-primary" data-toggle="modal" data-target="#addPermission">Add privilege</button>
         </div>
       </div>
       <!-- Modal (add) -->
@@ -61,7 +64,7 @@
         <div class="modal-dialog" role="document">
           <div class="modal-content">
             <div class="modal-header">
-              <h5 class="modal-title" id="addPermissionLabel">Add permission</h5>
+              <h5 class="modal-title" id="addPermissionLabel">Add privilege</h5>
               <button type="button" class="close" data-dismiss="modal" aria-label="Close">
                 <span aria-hidden="true">&times;</span>
               </button>
@@ -96,7 +99,7 @@
                   <label for="roleType" class="col-4">Person</label>
                   <div class="col-8">
                     <select class="form-control" id="roleType">
-                      <option>Select person</option>
+                      <option>Select user</option>
                       <option>Anna Bingham</option>
                       <option>Carlos Duarte</option>
                       <option>Evan Francis</option>
@@ -119,7 +122,7 @@
         <div class="modal-dialog" role="document">
           <div class="modal-content">
             <div class="modal-header">
-              <h5 class="modal-title" id="editPermissionLabel">Edit permission</h5>
+              <h5 class="modal-title" id="editPermissionLabel">Edit privilege</h5>
               <button type="button" class="close" data-dismiss="modal" aria-label="Close">
                 <span aria-hidden="true">&times;</span>
               </button>
@@ -154,7 +157,7 @@
                   <label for="roleType" class="col-4">Person</label>
                   <div class="col-8">
                     <select class="form-control" id="roleType">
-                      <option>Select person</option>
+                      <option>Select user</option>
                       <option selected="selected">Anna Bingham</option>
                       <option>Carlos Duarte</option>
                       <option>Evan Francis</option>

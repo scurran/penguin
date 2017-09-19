@@ -20,23 +20,26 @@
       <button class="navbar-toggler navbar-toggler-right" type="button" data-toggle="collapse" data-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
         <span class="navbar-toggler-icon"></span>
       </button>
-      <a class="navbar-brand" href="#">Contract Administration</a>
+      <a class="navbar-brand" href="#">Acme Bank - Contract Administration</a>
       <div class="collapse navbar-collapse" id="navbarNav">
         <ul class="navbar-nav mr-auto">
           <li class="nav-item">
             <a class="nav-link" href="products.html">Products</a>
           </li>
           <li class="nav-item active">
-            <a class="nav-link" href="people.html">People</a>
+            <a class="nav-link" href="users.html">Users</a>
           </li>
           <li class="nav-item">
             <a class="nav-link" href="roles.html">Roles</a>
           </li>
           <li class="nav-item">
-            <a class="nav-link" href="permissions.html">Permissions</a>
+            <a class="nav-link" href="privileges.html">Privileges</a>
           </li>
         </ul>
         <ul class="navbar-nav">
+          <li class="nav-item">
+            <a class="nav-link" href="account.html">Account</a>
+          </li>
           <li class="nav-item">
             <a class="nav-link" href="profile.html">Profile</a>
           </li>
@@ -50,18 +53,18 @@
     <div class="container-fluid">
       <div class="row mb-4">
         <div class="col">
-          <h2>People</h2>
+          <h2>Users</h2>
         </div>
         <div class="col col-md-auto">
-          <button class="btn btn-primary" data-toggle="modal" data-target="#addPeople">Add people</button>
+          <button class="btn btn-primary" data-toggle="modal" data-target="#addUsers">Add user</button>
         </div>
       </div>
       <!-- Modal (add) -->
-      <div class="modal fade" id="addPeople" tabindex="-1" role="dialog" aria-labelledby="addPeopleLabel" aria-hidden="true">
+      <div class="modal fade" id="addUsers" tabindex="-1" role="dialog" aria-labelledby="addUsersLabel" aria-hidden="true">
         <div class="modal-dialog" role="document">
           <div class="modal-content">
             <div class="modal-header">
-              <h5 class="modal-title" id="addPeopleLabel">Add people</h5>
+              <h5 class="modal-title" id="addUsersLabel">Add users</h5>
               <button type="button" class="close" data-dismiss="modal" aria-label="Close">
                 <span aria-hidden="true">&times;</span>
               </button>
@@ -129,11 +132,11 @@
       </div>
       <!-- end modal -->
       <!-- Modal (edit) -->
-      <div class="modal fade" id="editPeople" tabindex="-1" role="dialog" aria-labelledby="editPeopleLabel" aria-hidden="true">
+      <div class="modal fade" id="editUsers" tabindex="-1" role="dialog" aria-labelledby="editUsersLabel" aria-hidden="true">
         <div class="modal-dialog" role="document">
           <div class="modal-content">
             <div class="modal-header">
-              <h5 class="modal-title" id="editPeopleLabel">Edit people</h5>
+              <h5 class="modal-title" id="editUsersLabel">Edit users</h5>
               <button type="button" class="close" data-dismiss="modal" aria-label="Close">
                 <span aria-hidden="true">&times;</span>
               </button>
@@ -158,8 +161,8 @@
                     <select class="form-control" id="roleType">
                       <option>Select role</option>
                       <option selected="selected">Administrator</option>
-                      <option>Manager</option>
-                      <option>Agent</option>
+                      <option>Authoriser</option>
+                      <option>Keyer</option>
                       <option>Viewer</option>
                     </select>
                   </div>
@@ -202,25 +205,25 @@
       <!-- end modal -->
       <table class="table">
 				<thead class="bg-primary text-white">
-					<tr><th>Active</th><th>User</th><th>Role</th><th>Email address</th><th>Last Login</th><th>Edit</th></tr>
+					<tr><th>Active</th><th>User</th><th>Role</th><th>Product</th><th>Last Login</th><th>Edit</th></tr>
 				</thead>
 				<tbody>
-					<tr>
+					<tr class="text-muted">
 						<td><input id="uid1" value="1" checked="checked" type="checkbox"></td>
-						<td>Anna Bingham</td><td>Administrator</td><td>anna.bingham@companyone.com</td><td>01/01/18 00:00</td>
-						<td><a href="" class="btn btn-secondary" title="Edit this person"  data-toggle="modal" data-target="#editPeople">Edit</a></td></tr>
+						<td>Anna Bingham</td><td>Administrator</td><td>Current Account EUR UK</td><td>01/01/18 00:00</td>
+						<td><a href="" class="btn btn-secondary disabled" title="Edit this user"  data-toggle="modal" data-target="#editUsers">Edit</a></td></tr>
 					<tr>
 						<td><input id="uid2" value="1" type="checkbox"></td>
-            <td>Carlos Duarte</td><td>Manager</td><td>carlos.duarte@companytwo.com</td><td>01/01/18 00:00</td>
-            <td><a href="" class="btn btn-secondary" title="Edit this person"  data-toggle="modal" data-target="#editPeople">Edit</a></td></tr>
+            <td>Carlos Duarte</td><td>Authoriser</td><td>Current Account EUR ES</td><td>01/01/18 00:00</td>
+            <td><a href="" class="btn btn-secondary" title="Edit this user"  data-toggle="modal" data-target="#editUsers">Edit</a></td></tr>
 					<tr>
 						<td><input id="uid1" value="1" checked="checked" type="checkbox"></td>
-            <td>Evan Francis</td><td>Agent</td><td>evan.francis@companythree.com</td><td>01/01/18 00:00</td>
-            <td><a href="" class="btn btn-secondary" title="Edit this person"  data-toggle="modal" data-target="#editPeople">Edit</a></td></tr>
+            <td>Evan Francis</td><td>Keyer</td><td>Current Account GBP UK</td><td>01/01/18 00:00</td>
+            <td><a href="" class="btn btn-secondary" title="Edit this user"  data-toggle="modal" data-target="#editUsers">Edit</a></td></tr>
 					<tr>
 						<td><input id="uid1" value="1" checked="checked" type="checkbox"></td>
-            <td>Giacomo Hiscoti</td><td>Viewer</td><td>giacomo.hiscoti@companyfour.com</td><td>01/01/18 00:00</td>
-            <td><a href="" class="btn btn-secondary" title="Edit this person"  data-toggle="modal" data-target="#editPeople">Edit</a></td></tr>
+            <td>Giacomo Hiscoti</td><td>Viewer</td><td>Current Account EUR IT</td><td>01/01/18 00:00</td>
+            <td><a href="" class="btn btn-secondary" title="Edit this user"  data-toggle="modal" data-target="#editUsers">Edit</a></td></tr>
 				</tbody>
 			</table>
     </div><!-- /.container -->

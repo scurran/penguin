@@ -20,23 +20,26 @@
       <button class="navbar-toggler navbar-toggler-right" type="button" data-toggle="collapse" data-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
         <span class="navbar-toggler-icon"></span>
       </button>
-      <a class="navbar-brand" href="#">Contract Administration</a>
+      <a class="navbar-brand" href="#">Acme Bank - Contract Administration</a>
       <div class="collapse navbar-collapse" id="navbarNav">
         <ul class="navbar-nav mr-auto">
           <li class="nav-item active">
             <a class="nav-link" href="products.html">Products</a>
           </li>
           <li class="nav-item">
-            <a class="nav-link" href="people.html">People</a>
+            <a class="nav-link" href="users.html">Users</a>
           </li>
           <li class="nav-item">
             <a class="nav-link" href="roles.html">Roles</a>
           </li>
           <li class="nav-item">
-            <a class="nav-link" href="permissions.html">Permissions</a>
+            <a class="nav-link" href="privileges.html">Privileges</a>
           </li>
         </ul>
         <ul class="navbar-nav">
+          <li class="nav-item">
+            <a class="nav-link" href="account.html">Account</a>
+          </li>
           <li class="nav-item">
             <a class="nav-link" href="profile.html">Profile</a>
           </li>
@@ -100,24 +103,24 @@
       <!-- end modal -->
       <table class="table">
         <thead class="bg-primary text-white">
-          <tr><th>Active</th><th>Product</th><th>Description</th><th>Subscription type</th><th>Renewal date</th><th>Edit</th></tr>
+          <tr><th>Active</th><th>Product</th><th>Currency</th><th>Country</th><th>Activation date</th><th>Edit</th></tr>
         </thead>
         <tbody>
           <tr>
-            <td><input id="uid1" value="1" checked="checked" disabled="disabled" type="checkbox"></td>
-            <td>Current Account EUR UK</td><td>Product description</td><td>Full access</td><td>01/01/20 00:00</td>
+            <td><input id="uid1" value="1" checked="checked" type="checkbox"></td>
+            <td>Current Account EUR UK</td><td>Euros</td><td>United Kingdom</td><td>01/01/20 00:00</td>
             <td><a href="" class="btn btn-secondary" title="Edit this product"  data-toggle="modal" data-target="#editProduct">Edit</a></td></tr>
           <tr>
-            <td><input id="uid2" value="1" disabled="disabled" type="checkbox"></td>
-            <td>Current Account EUR ES</td><td>Product description</td><td>Full access</td><td>01/01/20 00:00</td>
+            <td><input id="uid2" value="1" type="checkbox"></td>
+            <td>Current Account EUR ES</td><td>Euros</td><td>Spain</td><td>01/01/20 00:00</td>
             <td><a href="" class="btn btn-secondary" title="Edit this product"  data-toggle="modal" data-target="#editProduct">Edit</a></td></tr>
           <tr>
-            <td><input id="uid1" value="1" checked="checked" disabled="disabled" type="checkbox"></td>
-            <td>Current Account GBP UK</td><td>Product description</td><td>Full access</td><td>01/01/20 00:00</td>
+            <td><input id="uid1" value="1" checked="checked" type="checkbox"></td>
+            <td>Current Account GBP UK</td><td>Sterling</td><td>United Kingdom</td><td>01/01/20 00:00</td>
             <td><a href="" class="btn btn-secondary" title="Edit this product"  data-toggle="modal" data-target="#editProduct">Edit</a></td></tr>
           <tr>
-            <td><input id="uid1" value="1" checked="checked" disabled="disabled" type="checkbox"></td>
-            <td>Current Account EUR IT</td><td>Product description</td><td>Full access</td><td>01/01/20 00:00</td>
+            <td><input id="uid1" value="1" checked="checked" type="checkbox"></td>
+            <td>Current Account EUR IT</td><td>Euros</td><td>Italy</td><td>01/01/20 00:00</td>
             <td><a href="" class="btn btn-secondary" title="Edit this product"  data-toggle="modal" data-target="#editProduct">Edit</a></td></tr>
         </tbody>
       </table>

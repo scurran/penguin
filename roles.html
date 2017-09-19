@@ -20,23 +20,26 @@
       <button class="navbar-toggler navbar-toggler-right" type="button" data-toggle="collapse" data-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
         <span class="navbar-toggler-icon"></span>
       </button>
-      <a class="navbar-brand" href="#">Contract Administration</a>
+      <a class="navbar-brand" href="#">Acme Bank - Contract Administration</a>
       <div class="collapse navbar-collapse" id="navbarNav">
         <ul class="navbar-nav mr-auto">
           <li class="nav-item">
             <a class="nav-link" href="products.html">Products</a>
           </li>
           <li class="nav-item">
-            <a class="nav-link" href="people.html">People</a>
+            <a class="nav-link" href="users.html">Users</a>
           </li>
           <li class="nav-item active">
             <a class="nav-link" href="roles.html">Roles</a>
           </li>
           <li class="nav-item">
-            <a class="nav-link" href="permissions.html">Permissions</a>
+            <a class="nav-link" href="privileges.html">Privileges</a>
           </li>
         </ul>
         <ul class="navbar-nav">
+          <li class="nav-item">
+            <a class="nav-link" href="account.html">Account</a>
+          </li>
           <li class="nav-item">
             <a class="nav-link" href="profile.html">Profile</a>
           </li>
@@ -100,39 +103,39 @@
       <!-- end modal -->
       <table class="table table-hover">
       				<thead class="bg-primary text-white">
-      				<tr><th>Role name</th><th>Manage Roles</th><th>Manage Users</th><th>Search Records</th><th>View Records</th><th>Edit Records</th><th>Create Records</th><th>Edit Role</th></tr>
+      				<tr><th>Role name</th><th>View Account Info</th><th>View Payments</th><th>Key Payments</th><th>Authorise Payments</th><th>Access Audit Records</th><th>Manage Privileges</th><th>Edit Role</th></tr>
       				</thead>
       				<tbody>
-      				<tr><td>Administrator</td><td><input id="1-1" value="1" checked="checked" disabled="disabled" type="checkbox"></td>
-      					<td><input id="1-1" value="1" checked="checked" disabled="disabled" type="checkbox"></td>
-      					<td><input id="1-2" value="1" checked="checked" disabled="disabled" type="checkbox"></td>
-      					<td><input id="1-3" value="1" checked="checked" disabled="disabled" type="checkbox"></td>
-      					<td><input id="1-4" value="1" checked="checked" disabled="disabled" type="checkbox"></td>
-      					<td><input id="1-5" value="1" checked="checked" disabled="disabled" type="checkbox"></td>
+      				<tr><td>Administrator</td><td><input id="1-1" value="1" checked="checked" type="checkbox"></td>
+      					<td><input id="1-1" value="1" checked="checked" type="checkbox"></td>
+      					<td><input id="1-2" value="1" checked="checked" type="checkbox"></td>
+      					<td><input id="1-3" value="1" checked="checked" type="checkbox"></td>
+      					<td><input id="1-4" value="1" checked="checked" type="checkbox"></td>
+      					<td><input id="1-5" value="1" checked="checked" type="checkbox"></td>
       					<td><a href="" title="Edit this role" class="btn btn-secondary" data-toggle="modal" data-target="#editRole">Edit</a></td>
       				</tr>
-      				<tr><td>Manager</td><td><input id="1-1" value="1" checked="checked" disabled="disabled" type="checkbox"></td>
-      					<td><input id="2-1" value="1" disabled="disabled" type="checkbox"></td>
-      					<td><input id="2-2" value="1" disabled="disabled" type="checkbox"></td>
-      					<td><input id="2-3" value="1" checked="checked" disabled="disabled" type="checkbox"></td>
-      					<td><input id="2-4" value="1" checked="checked" disabled="disabled" type="checkbox"></td>
-      					<td><input id="2-5" value="1" checked="checked" disabled="disabled" type="checkbox"></td>
+      				<tr><td>Authoriser</td><td><input id="1-1" value="1" checked="checked" type="checkbox"></td>
+      					<td><input id="2-1" value="1" type="checkbox" checked="checked"></td>
+      					<td><input id="2-2" value="1" type="checkbox" checked="checked"></td>
+      					<td><input id="2-3" value="1" checked="checked" type="checkbox"></td>
+      					<td><input id="2-4" value="1" checked="checked" type="checkbox"></td>
+      					<td><input id="2-5" value="1" type="checkbox"></td>
                 <td><a href="" title="Edit this role" class="btn btn-secondary" data-toggle="modal" data-target="#editRole" class="btn btn-secondary">Edit</a></td>
       				</tr>
-      				<tr><td>Agent</td><td><input id="1-1" value="1" checked="checked" disabled="disabled" type="checkbox"></td>
-      					<td><input id="3-1" value="1" disabled="disabled" type="checkbox"></td>
-      					<td><input id="3-2" value="1" disabled="disabled" type="checkbox"></td>
-      					<td><input id="3-3" value="1" checked="checked" disabled="disabled" type="checkbox"></td>
-      					<td><input id="3-4" value="1" checked="checked" disabled="disabled" type="checkbox"></td>
-      					<td><input id="3-5" value="1" checked="checked" disabled="disabled" type="checkbox"></td>
+      				<tr><td>Keyer</td><td><input id="1-1" value="1" checked="checked" type="checkbox"></td>
+      					<td><input id="3-1" value="1" type="checkbox" checked="checked"></td>
+      					<td><input id="3-2" value="1" type="checkbox" checked="checked"></td>
+      					<td><input id="3-3" value="1" type="checkbox"></td>
+      					<td><input id="3-4" value="1" type="checkbox"></td>
+      					<td><input id="3-5" value="1" type="checkbox"></td>
                 <td><a href="" title="Edit this role" class="btn btn-secondary" data-toggle="modal" data-target="#editRole" class="btn btn-secondary">Edit</a></td>
       				</tr>
-      				<tr><td>Viewer</td><td><input id="1-1" value="1" checked="checked" disabled="disabled" type="checkbox"></td>
-      					<td><input id="4-1" value="1" disabled="disabled" type="checkbox"></td>
-      					<td><input id="4-2" value="1" disabled="disabled" type="checkbox"></td>
-      					<td><input id="4-3" value="1" checked="checked" disabled="disabled" type="checkbox"></td>
-      					<td><input id="4-4" value="1" checked="checked" disabled="disabled" type="checkbox"></td>
-      					<td><input id="4-5" value="1" disabled="disabled" type="checkbox"></td>
+      				<tr><td>Viewer</td><td><input id="1-1" value="1" type="checkbox" checked="checked" ></td>
+      					<td><input id="4-1" value="1" type="checkbox" checked="checked"></td>
+      					<td><input id="4-2" value="1" type="checkbox"></td>
+      					<td><input id="4-3" value="1" type="checkbox"></td>
+      					<td><input id="4-4" value="1" type="checkbox"></td>
+      					<td><input id="4-5" value="1" type="checkbox"></td>
                 <td><a href="" title="Edit this role" class="btn btn-secondary" data-toggle="modal" data-target="#editRole" class="btn btn-secondary">Edit</a></td>
       				</tr>
       				</tbody>
