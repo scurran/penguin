@@ -16,20 +16,24 @@
     <nav class="navbar navbar-toggleable-md navbar-inverse bg-primary bg-faded mb-4">
       <a class="navbar-brand" href="#">Acme Bank</a>
     </nav>
-    <div class="container-fluid">
-      <div class="row mb-4">
-        <div class="col">
-          <h2>Create administrator account</h2>
-        </div>
+    <div class="container">
+      <!--<div class="alert alert-info" role="alert">
+        An access code has been sent to your primary phone.
+      </div>-->
+      <div class="alert alert-danger" role="alert">
+        Your access code was not recognised.
       </div>
-      <div class="row">
-        <div class="col col-lg-6 col-sm-12">
-          <div class="alert alert-success" role="alert">
-            <h4 class="alert-heading">Account access approved</h4>
-            <p>An email has been sent to the administrator of this account.</p>
+      <form class="col-lg-4 col-md-6 col-sm-12 ml-auto mr-auto">
+        <h2 class="form-signin-heading">Enter access code</h2>
+          <label for="inputCode" class="sr-only">Access code</label>
+          <input id="inputCode" class="form-control form-control-lg text-center" required="required" autofocus="" type="number">
+          <div class="checkbox">
+            <label>
+              <input value="remember-me" type="checkbox"> Remember me on this device
+            </label>
           </div>
-        </div>
-      </div>
+          <a class="btn btn-lg btn-primary btn-block" href="users.html">Complete sign in</a>
+      </form>
     </div><!-- /.container -->
 
 

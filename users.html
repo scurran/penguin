@@ -6,7 +6,7 @@
     <meta name="description" content="">
     <meta name="author" content="">
 
-    <title>Penguin</title>
+    <title>Acme Bank</title>
 
     <!-- Bootstrap core CSS -->
     <link href="css/bootstrap.min.css" rel="stylesheet">
@@ -20,26 +20,17 @@
       <button class="navbar-toggler navbar-toggler-right" type="button" data-toggle="collapse" data-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
         <span class="navbar-toggler-icon"></span>
       </button>
-      <a class="navbar-brand" href="#">Acme Bank - Contract Administration</a>
+      <a class="navbar-brand" href="#">Acme Bank</a>
       <div class="collapse navbar-collapse" id="navbarNav">
         <ul class="navbar-nav mr-auto">
-          <li class="nav-item">
-            <a class="nav-link" href="products.html">Products</a>
-          </li>
           <li class="nav-item active">
             <a class="nav-link" href="users.html">Users</a>
           </li>
           <li class="nav-item">
             <a class="nav-link" href="roles.html">Roles</a>
           </li>
-          <li class="nav-item">
-            <a class="nav-link" href="privileges.html">Privileges</a>
-          </li>
         </ul>
         <ul class="navbar-nav">
-          <li class="nav-item">
-            <a class="nav-link" href="account.html">Account</a>
-          </li>
           <li class="nav-item">
             <a class="nav-link" href="profile.html">Profile</a>
           </li>
@@ -89,8 +80,8 @@
                     <select class="form-control" id="roleType">
                       <option>Select role</option>
                       <option>Administrator</option>
-                      <option>Manager</option>
-                      <option>Agent</option>
+                      <option>Authoriser</option>
+                      <option>Keyer</option>
                       <option>Viewer</option>
                     </select>
                   </div>
@@ -203,15 +194,15 @@
         </div>
       </div>
       <!-- end modal -->
-      <table class="table">
+      <table class="table table-hover">
 				<thead class="bg-primary text-white">
 					<tr><th>Active</th><th>User</th><th>Role</th><th>Product</th><th>Last Login</th><th>Edit</th></tr>
 				</thead>
 				<tbody>
-					<tr class="text-muted">
+					<tr>
 						<td><input id="uid1" value="1" checked="checked" type="checkbox"></td>
 						<td>Anna Bingham</td><td>Administrator</td><td>Current Account EUR UK</td><td>01/01/18 00:00</td>
-						<td><a href="" class="btn btn-secondary disabled" title="Edit this user"  data-toggle="modal" data-target="#editUsers">Edit</a></td></tr>
+						<td><a href="" class="btn btn-secondary" title="Edit this user"  data-toggle="modal" data-target="#editUsers">Edit</a></td></tr>
 					<tr>
 						<td><input id="uid2" value="1" type="checkbox"></td>
             <td>Carlos Duarte</td><td>Authoriser</td><td>Current Account EUR ES</td><td>01/01/18 00:00</td>
