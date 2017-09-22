@@ -1,0 +1,392 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+    <meta name="description" content="">
+    <meta name="author" content="">
+
+    <title>Acme Bank - Administration</title>
+
+    <!-- Bootstrap core CSS -->
+    <link href="css/bootstrap.min.css" rel="stylesheet">
+
+    <!-- Custom styles for this template -->
+
+  </head>
+
+  <body>
+    <nav class="navbar navbar-toggleable-md navbar-inverse bg-primary bg-faded mb-4">
+      <button class="navbar-toggler navbar-toggler-right" type="button" data-toggle="collapse" data-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
+        <span class="navbar-toggler-icon"></span>
+      </button>
+      <a class="navbar-brand" href="#">Acme Bank - Administration</a>
+      <div class="collapse navbar-collapse" id="navbarNav">
+        <ul class="navbar-nav mr-auto">
+          <li class="nav-item">
+            <a class="nav-link" href="users.html">Users</a>
+          </li>
+          <li class="nav-item active">
+            <a class="nav-link" href="permissions.html">Permissions</a>
+          </li>
+        </ul>
+        <ul class="navbar-nav">
+          <li class="nav-item">
+            <a class="nav-link" href="profile.html">Profile</a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link" href="login.html">Logout</a>
+          </li>
+        </ul>
+      </div>
+    </nav>
+
+    <div class="container-fluid">
+      <div class="row mb-4">
+        <div class="col">
+          <h2>Permissions</h2>
+        </div>
+        <div class="col col-md-auto">
+          <button class="btn btn-primary" data-toggle="modal" data-target="#addPermission">Add permission</button>
+        </div>
+      </div>
+      <!-- Modal (add) -->
+      <div class="modal fade" id="addPermission" tabindex="-1" role="dialog" aria-labelledby="addPermissionLabel" aria-hidden="true">
+        <div class="modal-dialog modal-lg" role="document">
+          <div class="modal-content">
+            <div class="modal-header">
+              <h5 class="modal-title" id="addPermissionLabel">Add permission</h5>
+              <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                <span aria-hidden="true">&times;</span>
+              </button>
+            </div>
+            <div class="modal-body">
+              <form>
+                <div class="form-group row">
+                  <label for="permissionName" class="col-4">Permission name</label>
+                  <div class="col-8">
+                    <input type="text" class="form-control" id="permissionName" required="required" type="text">
+                  </div>
+                </div>
+                <div class="form-group row">
+                  <label for="permissionRestrictions" class="col-4">Restrictions</label>
+                  <div class="col-8">
+                    <textarea class="form-control" id="permissionRestrictions" rows="3"></textarea>
+                  </div>
+                </div>
+                <div class="form-group row">
+                  <label class="col-4">Apply to roles</label>
+                  <div class="col-8">
+                    <div class="form-check">
+                      <label class="form-check-label">
+                        <input class="form-check-input" id="roleAdministrator" type="checkbox" value="">
+                        Administrator
+                      </label>
+                    </div>
+                    <div class="form-check">
+                      <label class="form-check-label">
+                        <input class="form-check-input" id="roleAuthoriser" type="checkbox" value="">
+                        Authoriser
+                      </label>
+                    </div>
+                    <div class="form-check">
+                      <label class="form-check-label">
+                        <input class="form-check-input" id="roleKeyer" type="checkbox" value="">
+                        Keyer
+                      </label>
+                    </div>
+                    <div class="form-check">
+                      <label class="form-check-label">
+                        <input class="form-check-input" id="roleViewer" type="checkbox" value="">
+                        Viewer
+                      </label>
+                    </div>
+                  </div>
+                </div>
+              </form>
+            </div>
+            <div class="modal-footer">
+              <button type="button" class="btn btn-secondary" data-dismiss="modal">Close</button>
+              <button type="button" class="btn btn-primary">Save changes</button>
+            </div>
+          </div>
+        </div>
+      </div>
+      <!-- end modal -->
+      <!-- Modal (edit) -->
+      <div class="modal fade" id="editPermission" tabindex="-1" role="dialog" aria-labelledby="addProductLabel" aria-hidden="true">
+        <div class="modal-dialog modal-lg" role="document">
+          <div class="modal-content">
+            <div class="modal-header">
+              <h5 class="modal-title" id="editPermissionLabel">Edit permission</h5>
+              <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                <span aria-hidden="true">&times;</span>
+              </button>
+            </div>
+            <div class="modal-body">
+              <form>
+                <div class="form-group row">
+                  <label for="permissionName" class="col-4">Permission name</label>
+                  <div class="col-8">
+                    <input type="text" class="form-control" id="permissionName" required="required" type="text" value="View Account Info">
+                  </div>
+                </div>
+                <div class="form-group row">
+                  <label for="permissionRestrictions" class="col-4">Restrictions</label>
+                  <div class="col-8">
+                    <textarea class="form-control" id="permissionRestrictions" rows="3">Viewers cannot see company banking information</textarea>
+                  </div>
+                </div>
+                <div class="form-group row">
+                  <label class="col-4">Apply to roles</label>
+                  <div class="col-8">
+                    <div class="form-check">
+                      <label class="form-check-label">
+                        <input class="form-check-input" id="roleAdministrator" checked="checked" type="checkbox" value="">
+                        Administrator
+                      </label>
+                    </div>
+                    <div class="form-check">
+                      <label class="form-check-label">
+                        <input class="form-check-input" id="roleAuthoriser" checked="checked" type="checkbox" value="">
+                        Authoriser
+                      </label>
+                    </div>
+                    <div class="form-check">
+                      <label class="form-check-label">
+                        <input class="form-check-input" id="roleKeyer" checked="checked" type="checkbox" value="">
+                        Keyer
+                      </label>
+                    </div>
+                    <div class="form-check">
+                      <label class="form-check-label">
+                        <input class="form-check-input" id="roleViewer" checked="checked" type="checkbox" value="">
+                        Viewer
+                      </label>
+                    </div>
+                  </div>
+                </div>
+              </form>
+            </div>
+            <div class="modal-footer">
+              <button type="button" class="btn btn-secondary" data-dismiss="modal">Close</button>
+              <button type="button" class="btn btn-primary">Save changes</button>
+            </div>
+          </div>
+        </div>
+      </div>
+      <!-- end modal -->
+      <!-- Modal (view) -->
+      <div class="modal fade" id="viewPermission" tabindex="-1" role="dialog" aria-labelledby="addProductLabel" aria-hidden="true">
+        <div class="modal-dialog" role="document">
+          <div class="modal-content">
+            <div class="modal-header">
+              <h5 class="modal-title" id="viewPermissionLabel">Permission details</h5>
+              <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                <span aria-hidden="true">&times;</span>
+              </button>
+            </div>
+            <div class="modal-body">
+              <h6>Restrictions</h6>
+              <ul>
+                <li>Viewers cannot see company banking information</li>
+              </ul>
+            </div>
+          </div>
+        </div>
+      </div>
+      <!-- end modal -->
+      <table class="table table-hover">
+				<thead class="bg-primary text-white">
+  				<tr>
+            <th class="col-md-4">Permission</th>
+            <th class="col-md-2">Administrator</th>
+            <th class="col-md-2">Authoriser</th>
+            <th class="col-md-2">Keyer</th>
+            <th class="col-md-2">Viewer</th>
+            <th></th>
+          </tr>
+				</thead>
+				<tbody>
+  				<tr>
+            <td><a href="#" data-toggle="modal" data-target="#viewPermission">View Account Info</a></td>
+  					<td>
+              <label class="form-check-label text-success">
+                <input class="form-check-input" checked="checked" type="checkbox" value="">
+                Full access
+              </label>
+            </td>
+  					<td>
+              <label class="form-check-label text-success">
+                <input class="form-check-input" checked="checked" type="checkbox" value="">
+                Full access
+              </label>
+            </td>
+  					<td>
+              <label class="form-check-label text-success">
+                <input class="form-check-input" checked="checked" type="checkbox" value="">
+                Full access
+              </label>
+            </td>
+  					<td>
+              <label class="form-check-label text-warning">
+                <input class="form-check-input" checked="checked" type="checkbox" value="">
+                With restrictions
+              </label>
+            </td>
+            <td><a href="" class="btn btn-sm btn-secondary" title="Edit this permission"  data-toggle="modal" data-target="#editPermission">Edit</a></td>
+  				</tr>
+  				<tr>
+            <td><a href="#" data-toggle="modal" data-target="#viewPermission">View Payments</a></td>
+  					<td>
+              <label class="form-check-label text-success">
+                <input class="form-check-input" checked="checked" type="checkbox" value="">
+                Full access
+              </label>
+            </td>
+  					<td>
+              <label class="form-check-label text-warning">
+                <input class="form-check-input" checked="checked" type="checkbox" value="">
+                With restrictions
+              </label>
+            </td>
+  					<td>
+              <label class="form-check-label text-warning">
+                <input class="form-check-input" checked="checked" type="checkbox" value="">
+                With restrictions
+              </label>
+            </td>
+  					<td>
+              <label class="form-check-label text-warning">
+                <input class="form-check-input" checked="checked" type="checkbox" value="">
+                With restrictions
+              </label>
+            </td>
+            <td><a href="" class="btn btn-sm btn-secondary" title="Edit this permission"  data-toggle="modal" data-target="#editPermission">Edit</a></td>
+  				</tr>
+  				<tr>
+            <td><a href="#" data-toggle="modal" data-target="#viewPermission">Key Payments</a></td>
+  					<td>
+              <label class="form-check-label text-success">
+                <input class="form-check-input" checked="checked" type="checkbox" value="">
+                Full access
+              </label>
+            </td>
+  					<td>
+              <label class="form-check-label text-warning">
+                <input class="form-check-input" checked="checked" type="checkbox" value="">
+                With restrictions
+              </label>
+            </td>
+  					<td>
+              <label class="form-check-label text-warning">
+                <input class="form-check-input" checked="checked" type="checkbox" value="">
+                With restrictions
+              </label>
+            </td>
+  					<td>
+              <label class="form-check-label text-danger">
+                <input class="form-check-input" type="checkbox" value="" disabled="disabled">
+                No access
+              </label>
+            </td>
+            <td><a href="" class="btn btn-sm btn-secondary" title="Edit this permission"  data-toggle="modal" data-target="#editPermission">Edit</a></td>
+  				</tr>
+  				<tr>
+            <td><a href="#" data-toggle="modal" data-target="#viewPermission">Authorise Payments</a></td>
+  					<td>
+              <label class="form-check-label text-success">
+                <input class="form-check-input" checked="checked" type="checkbox" value="">
+                Full access
+              </label>
+            </td>
+  					<td>
+              <label class="form-check-label text-warning">
+                <input class="form-check-input" checked="checked" type="checkbox" value="">
+                With restrictions
+              </label>
+            </td>
+  					<td>
+              <label class="form-check-label text-danger">
+                <input class="form-check-input" type="checkbox" value="" disabled="disabled">
+                No access
+              </label>
+            </td>
+  					<td>
+              <label class="form-check-label text-danger">
+                <input class="form-check-input" type="checkbox" value="" disabled="disabled">
+                No access
+              </label>
+            </td>
+            <td><a href="" class="btn btn-sm btn-secondary" title="Edit this permission"  data-toggle="modal" data-target="#editPermission">Edit</a></td>
+  				</tr>
+          <tr>
+            <td><a href="#" data-toggle="modal" data-target="#viewPermission">Access Audit Records</a></td>
+            <td>
+              <label class="form-check-label text-success">
+                <input class="form-check-input" checked="checked" type="checkbox" value="">
+                Full access
+              </label>
+            </td>
+            <td>
+              <label class="form-check-label text-danger">
+                <input class="form-check-input" type="checkbox" value="" disabled="disabled">
+                No access
+              </label>
+            </td>
+            <td>
+              <label class="form-check-label text-danger">
+                <input class="form-check-input" type="checkbox" value="" disabled="disabled">
+                No access
+              </label>
+            </td>
+            <td>
+              <label class="form-check-label text-danger">
+                <input class="form-check-input" type="checkbox" value="" disabled="disabled">
+                No access
+              </label>
+            </td>
+            <td><a href="" class="btn btn-sm btn-secondary" title="Edit this permission"  data-toggle="modal" data-target="#editPermission">Edit</a></td>
+          </tr>
+          <tr>
+            <td><a href="#" data-toggle="modal" data-target="#viewPermission">Manage Privileges</a></td>
+            <td>
+              <label class="form-check-label text-success">
+                <input class="form-check-input" checked="checked" type="checkbox" value="">
+                Full access
+              </label>
+            </td>
+            <td>
+              <label class="form-check-label text-danger">
+                <input class="form-check-input" type="checkbox" value="" disabled="disabled">
+                No access
+              </label>
+            </td>
+            <td>
+              <label class="form-check-label text-danger">
+                <input class="form-check-input" type="checkbox" value="" disabled="disabled">
+                No access
+              </label>
+            </td>
+            <td>
+              <label class="form-check-label text-danger">
+                <input class="form-check-input" type="checkbox" value="" disabled="disabled">
+                No access
+              </label>
+            </td>
+            <td><a href="" class="btn btn-sm btn-secondary" title="Edit this permission"  data-toggle="modal" data-target="#editPermission">Edit</a></td>
+          </tr>
+				</tbody>
+			</table>
+    </div><!-- /.container -->
+
+
+    <!-- Bootstrap core JavaScript
+    ================================================== -->
+    <!-- Placed at the end of the document so the pages load faster -->
+    <script src="https://code.jquery.com/jquery-3.1.1.slim.min.js" integrity="sha384-A7FZj7v+d/sdmMqp/nOQwliLvUsJfDHW+k9Omg/a/EheAdgtzNs3hpfag6Ed950n" crossorigin="anonymous"></script>
+    <script>window.jQuery || document.write('<script src="../../assets/js/vendor/jquery.min.js"><\/script>')</script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/tether/1.4.0/js/tether.min.js" integrity="sha384-DztdAPBWPRXSA/3eYEEUWrWCy7G5KFbe8fFjk5JAIxUYHKkDx6Qin1DkWx51bBrb" crossorigin="anonymous"></script>
+    <script src="js/bootstrap.min.js"></script>
+  </body>
+</html>

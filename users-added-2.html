@@ -42,6 +42,9 @@
     </nav>
 
     <div class="container-fluid">
+      <div class="alert alert-success" role="alert">
+        An invite has been sent to Evan Francis
+      </div>
       <div class="row mb-4">
         <div class="col">
           <h2>Users</h2>
@@ -77,7 +80,7 @@
                 <div class="form-group row">
                   <label for="roleType" class="col-4">Role</label>
                   <div class="col-8">
-                    <select class="form-control" id="roleType" required="required">
+                    <select class="form-control" id="roleType">
                       <option>Select role</option>
                       <option>Administrator</option>
                       <option>Authoriser</option>
@@ -116,9 +119,79 @@
             </div>
             <div class="modal-footer">
               <button type="button" class="btn btn-secondary" data-dismiss="modal">Close</button>
-              <!--<button type="button" class="btn btn-primary">Save changes</button>-->
-              <a href="users-added.html" class="btn btn-primary">Save changes</a>
-
+              <button type="button" class="btn btn-primary">Save changes</button>
+            </div>
+          </div>
+        </div>
+      </div>
+      <!-- end modal -->
+      <!-- Modal (edit) -->
+      <div class="modal fade" id="editUsers" tabindex="-1" role="dialog" aria-labelledby="editUsersLabel" aria-hidden="true">
+        <div class="modal-dialog" role="document">
+          <div class="modal-content">
+            <div class="modal-header">
+              <h5 class="modal-title" id="editUsersLabel">Edit user</h5>
+              <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                <span aria-hidden="true">&times;</span>
+              </button>
+            </div>
+            <div class="modal-body">
+              <form>
+                <div class="form-group row">
+                  <label for="firstName" class="col-4">First name</label>
+                  <div class="col-8">
+                    <input type="text" class="form-control" id="firstName" required="required" type="text" value="Evan">
+                  </div>
+                </div>
+                <div class="form-group row">
+                  <label for="lastName" class="col-4">Last name</label>
+                  <div class="col-8">
+                    <input type="text" class="form-control" id="lastName" required="required" type="text" value="Francis">
+                  </div>
+                </div>
+                <div class="form-group row">
+                  <label for="roleType" class="col-4">Role</label>
+                  <div class="col-8">
+                    <select class="form-control" id="roleType" required="required">
+                      <option>Select role</option>
+                      <option>Administrator</option>
+                      <option>Authoriser</option>
+                      <option selected="selected">Keyer</option>
+                      <option>Viewer</option>
+                    </select>
+                  </div>
+                </div>
+                <div class="form-group row">
+                  <label for="primaryEmail" class="col-4">Primary email</label>
+                  <div class="col-8">
+                    <input type="text" class="form-control" id="primaryEmail" required="required" type="email" value="evan.francis@acmebank.com">
+                  </div>
+                </div>
+                <div class="form-group row">
+                  <label for="secondEmail" class="col-4">Secondary email</label>
+                  <div class="col-8">
+                    <input type="text" class="form-control" id="secondEmail" type="email">
+                    <small id="secondEmailHelpBlock" class="form-text text-muted">(optional)</small>
+                  </div>
+                </div>
+                <div class="form-group row">
+                  <label for="primaryPhone" class="col-4">Primary phone</label>
+                  <div class="col-8">
+                    <input type="text" class="form-control" id="primaryPhone" required="required" type="tel" value="00 44 123456789">
+                  </div>
+                </div>
+                <div class="form-group row">
+                  <label for="secondPhone" class="col-4">Secondary phone</label>
+                  <div class="col-8">
+                    <input type="text" class="form-control" id="secondPhone" type="tel">
+                    <small id="secondPhoneHelpBlock" class="form-text text-muted">(optional)</small>
+                  </div>
+                </div>
+              </form>
+            </div>
+            <div class="modal-footer">
+              <button type="button" class="btn btn-secondary" data-dismiss="modal">Close</button>
+              <button type="button" class="btn btn-primary">Save changes</button>
             </div>
           </div>
         </div>
@@ -133,15 +206,15 @@
 						<td><input id="uid1" value="1" checked="checked" type="checkbox" disabled="disabled"></td>
 						<td>Anna Bingham</td><td>Administrator</td><td>Current Account</td><td>01/01/18 00:00</td>
 						<td></td></tr>
+					<tr>
+						<td><input id="uid2" value="1" type="checkbox" disabled="disabled"></td>
+            <td>Carlos Duarte</td><td>Authoriser</td><td>Current Account</td><td>01/01/18 00:00</td>
+            <td><a href="" class="btn btn-sm btn-secondary" title="Edit this user">Edit</a></td></tr>
+					<tr>
+						<td><input id="uid1" value="1" type="checkbox" disabled="disabled"></td>
+            <td>Evan Francis</td><td>Keyer</td><td>Current Account</td><td>01/01/18 00:00</td>
+            <td><a href="" class="btn btn-sm btn-secondary" title="Edit this user"  data-toggle="modal" data-target="#editUsers">Edit</a></td></tr>
 					<!--<tr>
-						<td><input id="uid2" value="1" type="checkbox"></td>
-            <td>Carlos Duarte</td><td>Authoriser</td><td>Current Account EUR ES</td><td>01/01/18 00:00</td>
-            <td><a href="" class="btn btn-secondary" title="Edit this user"  data-toggle="modal" data-target="#editUsers">Edit</a></td></tr>
-					<tr>
-						<td><input id="uid1" value="1" checked="checked" type="checkbox"></td>
-            <td>Evan Francis</td><td>Keyer</td><td>Current Account GBP UK</td><td>01/01/18 00:00</td>
-            <td><a href="" class="btn btn-secondary" title="Edit this user"  data-toggle="modal" data-target="#editUsers">Edit</a></td></tr>
-					<tr>
 						<td><input id="uid1" value="1" checked="checked" type="checkbox"></td>
             <td>Giacomo Hiscoti</td><td>Viewer</td><td>Current Account EUR IT</td><td>01/01/18 00:00</td>
             <td><a href="" class="btn btn-secondary" title="Edit this user"  data-toggle="modal" data-target="#editUsers">Edit</a></td></tr>-->
