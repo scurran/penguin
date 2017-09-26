@@ -63,9 +63,56 @@
             <div class="modal-body">
               <form>
                 <div class="form-group row">
+                  <label for="permissionName" class="col-4 col-form-label">Permission ID</label>
+                  <div class="col-8">
+                    <p class="form-control-static" id="permissionName">0007</p>
+                  </div>
+                </div>
+                <div class="form-group row">
+                  <label for="roleType" class="col-4">Permission type</label>
+                  <div class="col-8">
+                    <select class="form-control" id="roleType" required="required">
+                      <option>Select type</option>
+                      <option>Accounts</option>
+                      <option>Cards</option>
+                      <option>Payments</option>
+                      <option>Profile</option>
+                    </select>
+                  </div>
+                </div>
+                <div class="form-group row">
                   <label for="permissionName" class="col-4">Permission name</label>
                   <div class="col-8">
                     <input type="text" class="form-control" id="permissionName" required="required" type="text">
+                  </div>
+                </div>
+                <div class="form-group row">
+                  <label class="col-4">Available actions</label>
+                  <div class="col-8">
+                    <div class="form-check">
+                      <label class="form-check-label">
+                        <input class="form-check-input" id="actionCheck" type="checkbox" value="">
+                        Create
+                      </label>
+                    </div>
+                    <div class="form-check">
+                      <label class="form-check-label">
+                        <input class="form-check-input" id="actionRead" type="checkbox" value="">
+                        Read
+                      </label>
+                    </div>
+                    <div class="form-check">
+                      <label class="form-check-label">
+                        <input class="form-check-input" id="actionUpdate" type="checkbox" value="">
+                        Update
+                      </label>
+                    </div>
+                    <div class="form-check">
+                      <label class="form-check-label">
+                        <input class="form-check-input" id="actionDelete" type="checkbox" value="">
+                        Delete
+                      </label>
+                    </div>
                   </div>
                 </div>
                 <div class="form-group row">
@@ -126,9 +173,56 @@
             <div class="modal-body">
               <form>
                 <div class="form-group row">
+                  <label for="permissionName" class="col-4 col-form-label">Permission ID</label>
+                  <div class="col-8">
+                    <p class="form-control-static" id="permissionName">0001</p>
+                  </div>
+                </div>
+                <div class="form-group row">
+                  <label for="roleType" class="col-4">Permission type</label>
+                  <div class="col-8">
+                    <select class="form-control" id="roleType" required="required">
+                      <option>Select type</option>
+                      <option>Accounts</option>
+                      <option>Cards</option>
+                      <option>Payments</option>
+                      <option selected>Profile</option>
+                    </select>
+                  </div>
+                </div>
+                <div class="form-group row">
                   <label for="permissionName" class="col-4">Permission name</label>
                   <div class="col-8">
-                    <input type="text" class="form-control" id="permissionName" required="required" type="text" value="View Account Info">
+                    <input type="text" class="form-control" id="permissionName" required="required" type="text" value="Customer Profile">
+                  </div>
+                </div>
+                <div class="form-group row">
+                  <label class="col-4">Available actions</label>
+                  <div class="col-8">
+                    <div class="form-check">
+                      <label class="form-check-label">
+                        <input class="form-check-input" id="actionCheck" type="checkbox" value="" checked="checked">
+                        Create
+                      </label>
+                    </div>
+                    <div class="form-check">
+                      <label class="form-check-label">
+                        <input class="form-check-input" id="actionRead" type="checkbox" value="" checked="checked">
+                        Read
+                      </label>
+                    </div>
+                    <div class="form-check">
+                      <label class="form-check-label">
+                        <input class="form-check-input" id="actionUpdate" type="checkbox" value="" checked="checked">
+                        Update
+                      </label>
+                    </div>
+                    <div class="form-check">
+                      <label class="form-check-label">
+                        <input class="form-check-input" id="actionDelete" type="checkbox" value="">
+                        Delete
+                      </label>
+                    </div>
                   </div>
                 </div>
                 <div class="form-group row">
@@ -196,9 +290,10 @@
         </div>
       </div>
       <!-- end modal -->
-      <table class="table table-hover">
+      <table class="table table-sm table-hover">
 				<thead class="bg-primary text-white">
   				<tr>
+            <th>ID</th>
             <th>Permission</th>
             <th>Administrator</th>
             <th>Authoriser</th>
@@ -209,7 +304,8 @@
 				</thead>
 				<tbody>
   				<tr>
-            <td><a href="#" data-toggle="modal" data-target="#viewPermission">View Account Info</a></td>
+            <td>0001</td>
+            <td><a href="#">Customer Profile</a></td>
   					<td>
               <label class="form-check-label text-success">
                 <input class="form-check-input" checked="checked" type="checkbox" value="">
@@ -237,7 +333,20 @@
             <td><a href="" class="btn btn-sm btn-secondary" title="Edit this permission"  data-toggle="modal" data-target="#editPermission">Edit</a></td>
   				</tr>
   				<tr>
-            <td><a href="#" data-toggle="modal" data-target="#viewPermission">View Payments</a></td>
+            <td>0002</td>
+            <td><a href="#" data-toggle="modal" data-target="#viewPermission">Customer Postal Address</a></td>
+            <td>
+              <label class="form-check-label text-success">
+                <input class="form-check-input" checked="checked" type="checkbox" value="">
+                Full access
+              </label>
+            </td>
+  					<td>
+              <label class="form-check-label text-success">
+                <input class="form-check-input" checked="checked" type="checkbox" value="">
+                Full access
+              </label>
+            </td>
   					<td>
               <label class="form-check-label text-success">
                 <input class="form-check-input" checked="checked" type="checkbox" value="">
@@ -250,22 +359,23 @@
                 With restrictions
               </label>
             </td>
-  					<td>
-              <label class="form-check-label text-warning">
-                <input class="form-check-input" checked="checked" type="checkbox" value="">
-                With restrictions
-              </label>
-            </td>
-  					<td>
-              <label class="form-check-label text-warning">
-                <input class="form-check-input" checked="checked" type="checkbox" value="">
-                With restrictions
-              </label>
-            </td>
-            <td><a href="" class="btn btn-sm btn-secondary" title="Edit this permission"  data-toggle="modal" data-target="#editPermission">Edit</a></td>
+            <td><a href="" class="btn btn-sm btn-secondary" title="Edit this permission">Edit</a></td>
   				</tr>
   				<tr>
-            <td><a href="#" data-toggle="modal" data-target="#viewPermission">Key Payments</a></td>
+            <td>0003</td>
+            <td><a href="#" data-toggle="modal" data-target="#viewPermission">Customer Electronic Address</a></td>
+            <td>
+              <label class="form-check-label text-success">
+                <input class="form-check-input" checked="checked" type="checkbox" value="">
+                Full access
+              </label>
+            </td>
+  					<td>
+              <label class="form-check-label text-success">
+                <input class="form-check-input" checked="checked" type="checkbox" value="">
+                Full access
+              </label>
+            </td>
   					<td>
               <label class="form-check-label text-success">
                 <input class="form-check-input" checked="checked" type="checkbox" value="">
@@ -278,22 +388,11 @@
                 With restrictions
               </label>
             </td>
-  					<td>
-              <label class="form-check-label text-warning">
-                <input class="form-check-input" checked="checked" type="checkbox" value="">
-                With restrictions
-              </label>
-            </td>
-  					<td>
-              <label class="form-check-label text-danger">
-                <input class="form-check-input" type="checkbox" value="" disabled="disabled">
-                No access
-              </label>
-            </td>
-            <td><a href="" class="btn btn-sm btn-secondary" title="Edit this permission"  data-toggle="modal" data-target="#editPermission">Edit</a></td>
+            <td><a href="" class="btn btn-sm btn-secondary" title="Edit this permission">Edit</a></td>
   				</tr>
   				<tr>
-            <td><a href="#" data-toggle="modal" data-target="#viewPermission">Authorise Payments</a></td>
+            <td>0004</td>
+            <td><a href="#" data-toggle="modal" data-target="#viewPermission">Customer Parties</a></td>
   					<td>
               <label class="form-check-label text-success">
                 <input class="form-check-input" checked="checked" type="checkbox" value="">
@@ -306,10 +405,10 @@
                 With restrictions
               </label>
             </td>
-  					<td>
-              <label class="form-check-label text-danger">
-                <input class="form-check-input" type="checkbox" value="" disabled="disabled">
-                No access
+            <td>
+              <label class="form-check-label text-warning">
+                <input class="form-check-input" checked="checked" type="checkbox" value="">
+                With restrictions
               </label>
             </td>
   					<td>
@@ -318,10 +417,127 @@
                 No access
               </label>
             </td>
-            <td><a href="" class="btn btn-sm btn-secondary" title="Edit this permission"  data-toggle="modal" data-target="#editPermission">Edit</a></td>
+            <td><a href="" class="btn btn-sm btn-secondary" title="Edit this permission">Edit</a></td>
   				</tr>
           <tr>
-            <td><a href="#" data-toggle="modal" data-target="#viewPermission">Access Audit Records</a></td>
+            <td>0005</td>
+            <td><a href="#" data-toggle="modal" data-target="#viewPermission">Customer Groups</a></td>
+            <td>
+              <label class="form-check-label text-success">
+                <input class="form-check-input" checked="checked" type="checkbox" value="">
+                Full access
+              </label>
+            </td>
+  					<td>
+              <label class="form-check-label text-warning">
+                <input class="form-check-input" checked="checked" type="checkbox" value="">
+                With restrictions
+              </label>
+            </td>
+            <td>
+              <label class="form-check-label text-warning">
+                <input class="form-check-input" checked="checked" type="checkbox" value="">
+                With restrictions
+              </label>
+            </td>
+  					<td>
+              <label class="form-check-label text-danger">
+                <input class="form-check-input" type="checkbox" value="" disabled="disabled">
+                No access
+              </label>
+            </td>
+            <td><a href="" class="btn btn-sm btn-secondary" title="Edit this permission">Edit</a></td>
+  				</tr>
+          <tr>
+            <td>0006</td>
+            <td><a href="#" data-toggle="modal" data-target="#viewPermission">SWIFT Payments</a></td>
+            <td>
+              <label class="form-check-label text-success">
+                <input class="form-check-input" checked="checked" type="checkbox" value="">
+                Full access
+              </label>
+            </td>
+  					<td>
+              <label class="form-check-label text-warning">
+                <input class="form-check-input" checked="checked" type="checkbox" value="">
+                With restrictions
+              </label>
+            </td>
+            <td>
+              <label class="form-check-label text-warning">
+                <input class="form-check-input" checked="checked" type="checkbox" value="">
+                With restrictions
+              </label>
+            </td>
+  					<td>
+              <label class="form-check-label text-danger">
+                <input class="form-check-input" type="checkbox" value="" disabled="disabled">
+                No access
+              </label>
+            </td>
+            <td><a href="" class="btn btn-sm btn-secondary" title="Edit this permission">Edit</a></td>
+  				</tr>
+          <tr>
+            <td>0007</td>
+            <td><a href="#" data-toggle="modal" data-target="#viewPermission">TARGET2 Payments</a></td>
+            <td>
+              <label class="form-check-label text-success">
+                <input class="form-check-input" checked="checked" type="checkbox" value="">
+                Full access
+              </label>
+            </td>
+  					<td>
+              <label class="form-check-label text-warning">
+                <input class="form-check-input" checked="checked" type="checkbox" value="">
+                With restrictions
+              </label>
+            </td>
+            <td>
+              <label class="form-check-label text-warning">
+                <input class="form-check-input" checked="checked" type="checkbox" value="">
+                With restrictions
+              </label>
+            </td>
+  					<td>
+              <label class="form-check-label text-danger">
+                <input class="form-check-input" type="checkbox" value="" disabled="disabled">
+                No access
+              </label>
+            </td>
+            <td><a href="" class="btn btn-sm btn-secondary" title="Edit this permission">Edit</a></td>
+  				</tr>
+          <tr>
+            <td>0008</td>
+            <td><a href="#" data-toggle="modal" data-target="#viewPermission">Faster Payments</a></td>
+            <td>
+              <label class="form-check-label text-success">
+                <input class="form-check-input" checked="checked" type="checkbox" value="">
+                Full access
+              </label>
+            </td>
+  					<td>
+              <label class="form-check-label text-warning">
+                <input class="form-check-input" checked="checked" type="checkbox" value="">
+                With restrictions
+              </label>
+            </td>
+            <td>
+              <label class="form-check-label text-warning">
+                <input class="form-check-input" checked="checked" type="checkbox" value="">
+                With restrictions
+              </label>
+            </td>
+  					<td>
+              <label class="form-check-label text-danger">
+                <input class="form-check-input" type="checkbox" value="" disabled="disabled">
+                No access
+              </label>
+            </td>
+            <td><a href="" class="btn btn-sm btn-secondary" title="Edit this permission">Edit</a></td>
+  				</tr>
+          <tr>
+            <td>0010</td>
+            <td><a href="#" data-toggle="modal" data-target="#viewPermission">Sepa CT</a></td>
             <td>
               <label class="form-check-label text-success">
                 <input class="form-check-input" checked="checked" type="checkbox" value="">
@@ -329,9 +545,15 @@
               </label>
             </td>
             <td>
-              <label class="form-check-label text-danger">
-                <input class="form-check-input" type="checkbox" value="" disabled="disabled">
-                No access
+              <label class="form-check-label text-warning">
+                <input class="form-check-input" checked="checked" type="checkbox" value="">
+                With restrictions
+              </label>
+            </td>
+            <td>
+              <label class="form-check-label text-warning">
+                <input class="form-check-input" checked="checked" type="checkbox" value="">
+                With restrictions
               </label>
             </td>
             <td>
@@ -340,16 +562,11 @@
                 No access
               </label>
             </td>
-            <td>
-              <label class="form-check-label text-danger">
-                <input class="form-check-input" type="checkbox" value="" disabled="disabled">
-                No access
-              </label>
-            </td>
-            <td><a href="" class="btn btn-sm btn-secondary" title="Edit this permission"  data-toggle="modal" data-target="#editPermission">Edit</a></td>
+            <td><a href="" class="btn btn-sm btn-secondary" title="Edit this permission">Edit</a></td>
           </tr>
           <tr>
-            <td><a href="#" data-toggle="modal" data-target="#viewPermission">Manage Privileges</a></td>
+            <td>0011</td>
+            <td><a href="#" data-toggle="modal" data-target="#viewPermission">Sepa DD</a></td>
             <td>
               <label class="form-check-label text-success">
                 <input class="form-check-input" checked="checked" type="checkbox" value="">
@@ -357,9 +574,15 @@
               </label>
             </td>
             <td>
-              <label class="form-check-label text-danger">
-                <input class="form-check-input" type="checkbox" value="" disabled="disabled">
-                No access
+              <label class="form-check-label text-warning">
+                <input class="form-check-input" checked="checked" type="checkbox" value="">
+                With restrictions
+              </label>
+            </td>
+            <td>
+              <label class="form-check-label text-warning">
+                <input class="form-check-input" checked="checked" type="checkbox" value="">
+                With restrictions
               </label>
             </td>
             <td>
@@ -368,14 +591,415 @@
                 No access
               </label>
             </td>
-            <td>
-              <label class="form-check-label text-danger">
-                <input class="form-check-input" type="checkbox" value="" disabled="disabled">
-                No access
-              </label>
-            </td>
-            <td><a href="" class="btn btn-sm btn-secondary" title="Edit this permission"  data-toggle="modal" data-target="#editPermission">Edit</a></td>
+            <td><a href="" class="btn btn-sm btn-secondary" title="Edit this permission">Edit</a></td>
           </tr>
+          <tr>
+            <td>0012</td>
+            <td><a href="#" data-toggle="modal" data-target="#viewPermission">BACS CT</a></td>
+            <td>
+              <label class="form-check-label text-success">
+                <input class="form-check-input" checked="checked" type="checkbox" value="">
+                Full access
+              </label>
+            </td>
+            <td>
+              <label class="form-check-label text-warning">
+                <input class="form-check-input" checked="checked" type="checkbox" value="">
+                With restrictions
+              </label>
+            </td>
+            <td>
+              <label class="form-check-label text-warning">
+                <input class="form-check-input" checked="checked" type="checkbox" value="">
+                With restrictions
+              </label>
+            </td>
+            <td>
+              <label class="form-check-label text-danger">
+                <input class="form-check-input" type="checkbox" value="" disabled="disabled">
+                No access
+              </label>
+            </td>
+            <td><a href="" class="btn btn-sm btn-secondary" title="Edit this permission">Edit</a></td>
+          </tr>
+          <tr>
+            <td>0013</td>
+            <td><a href="#" data-toggle="modal" data-target="#viewPermission">BACS DD</a></td>
+            <td>
+              <label class="form-check-label text-success">
+                <input class="form-check-input" checked="checked" type="checkbox" value="">
+                Full access
+              </label>
+            </td>
+            <td>
+              <label class="form-check-label text-warning">
+                <input class="form-check-input" checked="checked" type="checkbox" value="">
+                With restrictions
+              </label>
+            </td>
+            <td>
+              <label class="form-check-label text-warning">
+                <input class="form-check-input" checked="checked" type="checkbox" value="">
+                With restrictions
+              </label>
+            </td>
+            <td>
+              <label class="form-check-label text-danger">
+                <input class="form-check-input" type="checkbox" value="" disabled="disabled">
+                No access
+              </label>
+            </td>
+            <td><a href="" class="btn btn-sm btn-secondary" title="Edit this permission">Edit</a></td>
+          </tr>
+          <tr>
+            <td>0014</td>
+            <td><a href="#" data-toggle="modal" data-target="#viewPermission">Fatwire</a></td>
+            <td>
+              <label class="form-check-label text-success">
+                <input class="form-check-input" checked="checked" type="checkbox" value="">
+                Full access
+              </label>
+            </td>
+            <td>
+              <label class="form-check-label text-warning">
+                <input class="form-check-input" checked="checked" type="checkbox" value="">
+                With restrictions
+              </label>
+            </td>
+            <td>
+              <label class="form-check-label text-warning">
+                <input class="form-check-input" checked="checked" type="checkbox" value="">
+                With restrictions
+              </label>
+            </td>
+            <td>
+              <label class="form-check-label text-danger">
+                <input class="form-check-input" type="checkbox" value="" disabled="disabled">
+                No access
+              </label>
+            </td>
+            <td><a href="" class="btn btn-sm btn-secondary" title="Edit this permission">Edit</a></td>
+          </tr>
+          <tr>
+            <td>0015</td>
+            <td><a href="#" data-toggle="modal" data-target="#viewPermission">Local ACH</a></td>
+            <td>
+              <label class="form-check-label text-success">
+                <input class="form-check-input" checked="checked" type="checkbox" value="">
+                Full access
+              </label>
+            </td>
+            <td>
+              <label class="form-check-label text-warning">
+                <input class="form-check-input" checked="checked" type="checkbox" value="">
+                With restrictions
+              </label>
+            </td>
+            <td>
+              <label class="form-check-label text-warning">
+                <input class="form-check-input" checked="checked" type="checkbox" value="">
+                With restrictions
+              </label>
+            </td>
+            <td>
+              <label class="form-check-label text-danger">
+                <input class="form-check-input" type="checkbox" value="" disabled="disabled">
+                No access
+              </label>
+            </td>
+            <td><a href="" class="btn btn-sm btn-secondary" title="Edit this permission">Edit</a></td>
+          </tr>
+          <tr>
+            <td>0016</td>
+            <td><a href="#" data-toggle="modal" data-target="#viewPermission">General Payment</a></td>
+            <td>
+              <label class="form-check-label text-success">
+                <input class="form-check-input" checked="checked" type="checkbox" value="">
+                Full access
+              </label>
+            </td>
+            <td>
+              <label class="form-check-label text-warning">
+                <input class="form-check-input" checked="checked" type="checkbox" value="">
+                With restrictions
+              </label>
+            </td>
+            <td>
+              <label class="form-check-label text-warning">
+                <input class="form-check-input" checked="checked" type="checkbox" value="">
+                With restrictions
+              </label>
+            </td>
+            <td>
+              <label class="form-check-label text-danger">
+                <input class="form-check-input" type="checkbox" value="" disabled="disabled">
+                No access
+              </label>
+            </td>
+            <td><a href="" class="btn btn-sm btn-secondary" title="Edit this permission">Edit</a></td>
+          </tr>
+          <tr>
+            <td>0017</td>
+            <td><a href="#" data-toggle="modal" data-target="#viewPermission">Create Account</a></td>
+            <td>
+              <label class="form-check-label text-success">
+                <input class="form-check-input" checked="checked" type="checkbox" value="">
+                Full access
+              </label>
+            </td>
+            <td>
+              <label class="form-check-label text-warning">
+                <input class="form-check-input" checked="checked" type="checkbox" value="">
+                With restrictions
+              </label>
+            </td>
+            <td>
+              <label class="form-check-label text-danger">
+                <input class="form-check-input" type="checkbox" value="" disabled="disabled">
+                No access
+              </label>
+            </td>
+            <td>
+              <label class="form-check-label text-danger">
+                <input class="form-check-input" type="checkbox" value="" disabled="disabled">
+                No access
+              </label>
+            </td>
+            <td><a href="" class="btn btn-sm btn-secondary" title="Edit this permission">Edit</a></td>
+          </tr>
+          <tr>
+            <td>0018</td>
+            <td><a href="#" data-toggle="modal" data-target="#viewPermission">Block Account</a></td>
+            <td>
+              <label class="form-check-label text-success">
+                <input class="form-check-input" checked="checked" type="checkbox" value="">
+                Full access
+              </label>
+            </td>
+            <td>
+              <label class="form-check-label text-warning">
+                <input class="form-check-input" checked="checked" type="checkbox" value="">
+                With restrictions
+              </label>
+            </td>
+            <td>
+              <label class="form-check-label text-danger">
+                <input class="form-check-input" type="checkbox" value="" disabled="disabled">
+                No access
+              </label>
+            </td>
+            <td>
+              <label class="form-check-label text-danger">
+                <input class="form-check-input" type="checkbox" value="" disabled="disabled">
+                No access
+              </label>
+            </td>
+            <td><a href="" class="btn btn-sm btn-secondary" title="Edit this permission">Edit</a></td>
+          </tr>
+          <tr>
+            <td>0019</td>
+            <td><a href="#" data-toggle="modal" data-target="#viewPermission">Cancel Account</a></td>
+            <td>
+              <label class="form-check-label text-success">
+                <input class="form-check-input" checked="checked" type="checkbox" value="">
+                Full access
+              </label>
+            </td>
+            <td>
+              <label class="form-check-label text-warning">
+                <input class="form-check-input" checked="checked" type="checkbox" value="">
+                With restrictions
+              </label>
+            </td>
+            <td>
+              <label class="form-check-label text-danger">
+                <input class="form-check-input" type="checkbox" value="" disabled="disabled">
+                No access
+              </label>
+            </td>
+            <td>
+              <label class="form-check-label text-danger">
+                <input class="form-check-input" type="checkbox" value="" disabled="disabled">
+                No access
+              </label>
+            </td>
+            <td><a href="" class="btn btn-sm btn-secondary" title="Edit this permission">Edit</a></td>
+          </tr>
+          <tr>
+            <td>0020</td>
+            <td><a href="#" data-toggle="modal" data-target="#viewPermission">Create Card</a></td>
+            <td>
+              <label class="form-check-label text-success">
+                <input class="form-check-input" checked="checked" type="checkbox" value="">
+                Full access
+              </label>
+            </td>
+            <td>
+              <label class="form-check-label text-warning">
+                <input class="form-check-input" checked="checked" type="checkbox" value="">
+                With restrictions
+              </label>
+            </td>
+            <td>
+              <label class="form-check-label text-danger">
+                <input class="form-check-input" type="checkbox" value="" disabled="disabled">
+                No access
+              </label>
+            </td>
+            <td>
+              <label class="form-check-label text-danger">
+                <input class="form-check-input" type="checkbox" value="" disabled="disabled">
+                No access
+              </label>
+            </td>
+            <td><a href="" class="btn btn-sm btn-secondary" title="Edit this permission">Edit</a></td>
+          </tr>
+          <tr>
+            <td>0021</td>
+            <td><a href="#" data-toggle="modal" data-target="#viewPermission">Block Card</a></td>
+            <td>
+              <label class="form-check-label text-success">
+                <input class="form-check-input" checked="checked" type="checkbox" value="">
+                Full access
+              </label>
+            </td>
+            <td>
+              <label class="form-check-label text-warning">
+                <input class="form-check-input" checked="checked" type="checkbox" value="">
+                With restrictions
+              </label>
+            </td>
+            <td>
+              <label class="form-check-label text-danger">
+                <input class="form-check-input" type="checkbox" value="" disabled="disabled">
+                No access
+              </label>
+            </td>
+            <td>
+              <label class="form-check-label text-danger">
+                <input class="form-check-input" type="checkbox" value="" disabled="disabled">
+                No access
+              </label>
+            </td>
+            <td><a href="" class="btn btn-sm btn-secondary" title="Edit this permission">Edit</a></td>
+          </tr>
+          <tr>
+            <td>0022</td>
+            <td><a href="#" data-toggle="modal" data-target="#viewPermission">Cancel Card</a></td>
+            <td>
+              <label class="form-check-label text-success">
+                <input class="form-check-input" checked="checked" type="checkbox" value="">
+                Full access
+              </label>
+            </td>
+            <td>
+              <label class="form-check-label text-warning">
+                <input class="form-check-input" checked="checked" type="checkbox" value="">
+                With restrictions
+              </label>
+            </td>
+            <td>
+              <label class="form-check-label text-danger">
+                <input class="form-check-input" type="checkbox" value="" disabled="disabled">
+                No access
+              </label>
+            </td>
+            <td>
+              <label class="form-check-label text-danger">
+                <input class="form-check-input" type="checkbox" value="" disabled="disabled">
+                No access
+              </label>
+            </td>
+            <td><a href="" class="btn btn-sm btn-secondary" title="Edit this permission">Edit</a></td>
+          </tr>
+          <tr>
+            <td>0023</td>
+            <td><a href="#" data-toggle="modal" data-target="#viewPermission">Change Linked Account</a></td>
+            <td>
+              <label class="form-check-label text-success">
+                <input class="form-check-input" checked="checked" type="checkbox" value="">
+                Full access
+              </label>
+            </td>
+            <td>
+              <label class="form-check-label text-warning">
+                <input class="form-check-input" checked="checked" type="checkbox" value="">
+                With restrictions
+              </label>
+            </td>
+            <td>
+              <label class="form-check-label text-danger">
+                <input class="form-check-input" type="checkbox" value="" disabled="disabled">
+                No access
+              </label>
+            </td>
+            <td>
+              <label class="form-check-label text-danger">
+                <input class="form-check-input" type="checkbox" value="" disabled="disabled">
+                No access
+              </label>
+            </td>
+            <td><a href="" class="btn btn-sm btn-secondary" title="Edit this permission">Edit</a></td>
+          </tr>
+          <tr>
+            <td>0024</td>
+            <td><a href="#" data-toggle="modal" data-target="#viewPermission">Request Duplicate Card</a></td>
+            <td>
+              <label class="form-check-label text-success">
+                <input class="form-check-input" checked="checked" type="checkbox" value="">
+                Full access
+              </label>
+            </td>
+            <td>
+              <label class="form-check-label text-warning">
+                <input class="form-check-input" checked="checked" type="checkbox" value="">
+                With restrictions
+              </label>
+            </td>
+            <td>
+              <label class="form-check-label text-danger">
+                <input class="form-check-input" type="checkbox" value="" disabled="disabled">
+                No access
+              </label>
+            </td>
+            <td>
+              <label class="form-check-label text-danger">
+                <input class="form-check-input" type="checkbox" value="" disabled="disabled">
+                No access
+              </label>
+            </td>
+            <td><a href="" class="btn btn-sm btn-secondary" title="Edit this permission">Edit</a></td>
+          </tr>
+          <tr>
+            <td>0025</td>
+            <td><a href="#" data-toggle="modal" data-target="#viewPermission">Request Digital Wallet</a></td>
+            <td>
+              <label class="form-check-label text-success">
+                <input class="form-check-input" checked="checked" type="checkbox" value="">
+                Full access
+              </label>
+            </td>
+            <td>
+              <label class="form-check-label text-warning">
+                <input class="form-check-input" checked="checked" type="checkbox" value="">
+                With restrictions
+              </label>
+            </td>
+            <td>
+              <label class="form-check-label text-danger">
+                <input class="form-check-input" type="checkbox" value="" disabled="disabled">
+                No access
+              </label>
+            </td>
+            <td>
+              <label class="form-check-label text-danger">
+                <input class="form-check-input" type="checkbox" value="" disabled="disabled">
+                No access
+              </label>
+            </td>
+            <td><a href="" class="btn btn-sm btn-secondary" title="Edit this permission">Edit</a></td>
+          </tr>
+
 				</tbody>
 			</table>
     </div><!-- /.container -->
